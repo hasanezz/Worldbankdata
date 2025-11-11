@@ -51,10 +51,10 @@ Interactive docs at http://localhost:8000/docs
 # POST request
 curl -X POST http://localhost:8000/query \
   -H "Content-Type: application/json" \
-  -d '{"question": "What is the GDP of Saudi Arabia in 2022?"}'
+  -d '{"question": "What is the GDP of Leba in 2022?"}'
 
 # GET request
-curl "http://localhost:8000/ask?q=Latest+inflation+rate+for+KSA"
+curl "http://localhost:8000/ask?q=Latest+inflation+rate+for+LEBANON"
 ```
 
 **Python:**
@@ -64,7 +64,7 @@ import requests
 
 resp = requests.post(
     "http://localhost:8000/query",
-    json={"question": "What is the GDP of Saudi Arabia in 2022?"}
+    json={"question": "What is the GDP of Lebanon in 2022?"}
 )
 
 print(resp.json()['value'])  # "$1.11T"
@@ -72,10 +72,7 @@ print(resp.json()['value'])  # "$1.11T"
 
 ## Sample Questions
 
-- "What is the GDP of Saudi Arabia in 2022?"
 - "GDP per capita PPP for United States in 2021"
-- "Population of females aged above 65 in Saudi Arabia in 2024"
-- "Latest inflation rate for KSA"
 - "Unemployment rate for males aged 15-24 in Egypt in 2020"
 - "Life expectancy in Japan in 2022"
 - "CO2 emissions per capita for China in 2021"
@@ -84,7 +81,7 @@ print(resp.json()['value'])  # "$1.11T"
 
 ```json
 {
-  "question": "What is the GDP of Saudi Arabia in 2022?",
+  "question": "What is the GDP of Lebanon in 2022?",
   "country": "SAU",
   "indicator_code": "NY.GDP.MKTP.CD",
   "indicator_name": "GDP (current US$)",
